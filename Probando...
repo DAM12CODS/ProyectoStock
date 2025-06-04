@@ -1,0 +1,37 @@
+include<iostream>
+using namespace std;
+
+int main(){
+
+  int op;
+
+do{
+  cout<<"\t------Menu------\n";
+  cout<<"\t1. Introducir Datos\n";
+  cout<<"\t2. Buscar integrante\n";
+  cout<<"\t3. BorrarIntegrante\n";
+  cout<<"\t4. Salir\n";
+while(op=3);
+
+  switch(op){
+              case 1:{
+
+              break;
+              }
+
+              case 2:{
+              break;
+              }
+
+              case 3:{
+              break;
+              }
+
+              case 4:{
+              return 0;
+              }
+};
+
+
+  return 0;
+};
