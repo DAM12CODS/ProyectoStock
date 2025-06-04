@@ -11,7 +11,7 @@ do{
   cout<<"\t2. Buscar integrante\n";
   cout<<"\t3. BorrarIntegrante\n";
   cout<<"\t4. Salir\n";
-while(op=3);
+while(op=4);
 
   switch(op){
               case 1:{
