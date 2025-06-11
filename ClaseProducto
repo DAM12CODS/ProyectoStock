@@ -30,11 +30,18 @@
             }
             set
             {
-                if (string.IsNullOrWhiteSpace(value))
-                {
-                    throw new ArgumentOutOfRangeException(nameof(value), "Debe existir un número de código...");
-                }
-                _codigoProducto = value;
+              if (string.IsNullOrWhiteSpace(value))
+            {
+    throw new ArgumentOutOfRangeException(nameof(value), "Debe existir un número de código...");
+            }
+
+          if (value.Length != 6)
+           {
+     throw new ArgumentOutOfRangeException(nameof(value), "El código debe tener exactamente 6 caracteres.");
+           }
+
+       _codigoProducto = value;
+
             }
         }
 
