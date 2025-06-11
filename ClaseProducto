@@ -1,0 +1,108 @@
+﻿namespace Inventario
+{
+    public class Producto
+    {
+        //Atributos
+        private string _codigoProducto;
+        private string _nombreProducto;
+        private string _categoriaProducto;
+        private bool _estadoProducto;
+        private int _cantidadProducto;
+        private double _precioProducto;
+
+        //Constructor
+        public Producto(string codigoProducto, string nombreProducto, string categoriaProducto, bool estadoProducto, int cantidadProducto, double precioProducto)
+        {
+            CodigoProducto = codigoProducto;        
+            NombreProducto = nombreProducto;
+            CategoriaProducto = categoriaProducto;
+            EstadoProducto = estadoProducto;
+            CantidadProducto = cantidadProducto;
+            PrecioProducto = precioProducto;
+        }
+        
+        //Validaciones
+        public string CodigoProducto
+        {
+            get
+            {
+                return _codigoProducto;
+            }
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                {
+                    throw new ArgumentOutOfRangeException(nameof(value), "Debe existir un número de código...");
+                }
+                _codigoProducto = value;
+            }
+        }
+
+        public string NombreProducto
+        {
+            get
+            {
+                return _nombreProducto;
+            }
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                {
+                    throw new ArgumentOutOfRangeException(nameof(value), "El nombre del producto no puede estar vacío.");
+                }
+                _nombreProducto = value;
+            }
+        }
+
+        public string CategoriaProducto
+        {
+            get 
+            { 
+                return _categoriaProducto;
+            }
+            set { _categoriaProducto = value;} 
+        }
+
+        public bool EstadoProducto
+        {
+            get 
+            { 
+                return _estadoProducto;
+            }
+            set { _estadoProducto = value; }
+        }
+
+        public int CantidadProducto
+        {
+            get
+            {
+                return _cantidadProducto;
+            }
+            set
+            {
+                if (value <= 0)
+                {
+                    throw new ArgumentOutOfRangeException(nameof(value), "La cantidad debe ser mayor que cero.");
+                }
+                _cantidadProducto = value;
+            }
+        }
+
+        public double PrecioProducto
+        {
+            get
+            {
+                return _precioProducto;
+            }
+            set
+            {
+                if (value <= 0)
+                {
+                    throw new ArgumentOutOfRangeException(nameof(value), "El precio debe ser mayor que cero.");
+                }
+                _precioProducto = value;
+            }
+        }
+    }
+
+}//Se agrego los getters y setters de los atributos 
