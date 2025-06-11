@@ -14,28 +14,6 @@ namespace Capa_Entidad
 
         public Venta(string Id_Venta, string Fecha_Venta, int Cantidad_Venta, double Precio_Unitario, double Subtotal, double Impuesto, double Total)
         {
-            // Validaciones en constructor
-            if (string.IsNullOrWhiteSpace(Id_Venta))
-                throw new ArgumentException("El ID de la venta no puede estar vacío.");
-
-            if (string.IsNullOrWhiteSpace(Fecha_Venta))
-                throw new ArgumentException("La fecha de la venta no puede estar vacía.");
-
-            if (Cantidad_Venta <= 0)
-                throw new ArgumentException("La cantidad debe ser mayor que cero.");
-
-            if (Precio_Unitario < 0)
-                throw new ArgumentException("El precio unitario no puede ser negativo.");
-
-            if (Subtotal < 0)
-                throw new ArgumentException("El subtotal no puede ser negativo.");
-
-            if (Impuesto < 0)
-                throw new ArgumentException("El impuesto no puede ser negativo.");
-
-            if (Total < 0)
-                throw new ArgumentException("El total no puede ser negativo.");
-
             this.id_Venta = Id_Venta;
             this.fecha_Venta = Fecha_Venta;
             this.cantidad_Venta = Cantidad_Venta;
